@@ -49,6 +49,8 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+// Variables
+@primary-color: #be24aa;
 * {
     box-sizing: border-box;
 }
@@ -57,3 +59,18 @@ html, body {
     height: 100%;
 }
 
+header {
+	display: flex;
+	justify-content: center;
+	padding: 1%;
+
+	h1 {
+		color: @primary-color;
+		text-align: center;
+		font-size: 30px;
+	}
+
+	h2 {
+		color: @primary-color;
+	}
+}
