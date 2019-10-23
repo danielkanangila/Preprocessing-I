@@ -1,0 +1,90 @@
+/** Navigation **/
+.navbar {
+	position: fixed;
+	top: -1px;
+	left: -1px;
+	width: 100%;
+	height: fit-content;
+	background-color: @dark-color-1;
+	box-shadow: -1px 3px 3px -2px rgba(0,0,0, 1);
+	-webkit-box-shadow: -1px 3px 3px -2px rgba(0,0,0, 1);
+	-moz-box-shadow: -1px 3px 3px -2px rgba(0,0,0, 1);
+    z-index: 5;
+    
+	.container {
+		#display.flex();
+		#display.flex-direction-row();
+		justify-content: space-between;
+		.logo {
+			display: block;
+			padding: 5px;
+			width: 40px;
+			background-color: @color-primary;
+			border-radius: 4px;
+		} // end logo
+		.nav-toggle {
+			color: #ffffff;
+			font-size: 25px;
+			margin-top: 3px;
+		}
+	} // end container
+}
+
+/** Main Navigation (Hamburger Menu) **/
+.main-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: @dark-color-1;
+	height: 100vh;
+	width: 0;
+	overflow-x: hidden;
+	transition: .5s;
+	#display.flex();
+	#display.flex-direction-column();
+	justify-content: center;
+	box-shadow: 4px 0px 3px -2px rgba(0,0,01);
+	-webkit-box-shadow: 4px 0px 3px -2px rgba(0,0,01);
+	-moz-box-shadow: 4px 0px 3px -2px rgba(0,0,01);
+	z-index: 1;
+	// Links
+	&-links {
+		#display.flex();
+		#display.flex-direction-column();
+		width: 100%;
+		li {
+			width: 100%;
+			a {
+				display: block;
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 1.1rem;
+				color: @grey-color;
+				padding: 1.5rem 0;
+				transition: .3s;
+
+				@media screen and (min-width: 760px) {
+					font-size: 1.6rem;
+				}
+			}
+			a:hover {
+				background-color: @color-primary;
+				color: #fff;
+			}
+		} // end li
+	} // end -links
+	
+	// Close Button
+	&-close {
+		position: absolute;
+		top: 2rem;
+		right: 2.5rem;
+		color: @grey-color;
+		font-size: 3.6rem;
+	}
+
+	&-close:hover {
+		color: #fff;
+	}
+}
