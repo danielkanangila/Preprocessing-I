@@ -17,24 +17,28 @@
 <body>
     <header>
         <div role="navigation" class="navbar">
-            <div class="logo">
-                <object data="images/logo.svg" type="image/svg+xml" class="logo-img"></object>
-            </div>
-            <a href="#" class="btn-nav-toggle">
-                <i class="fas fa-bars"></i>
-            </a>
-            <!-- Hamburger Menu -->
-            <nav class="main-nav" id="drawerNav">
-                <a href="#" class="main-nav-close">
-                    <i class="fas fa-times-circle"></i>
+            <div class="container">
+
+                <a href="index.html" class="logo">
+                    <object data="images/logo.svg" type="image/svg+xml" class="logo-img"></object>
                 </a>
-                <ul class="main-nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Protfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+                <a href="javascript:void(0)" onclick="openNav()" class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <!-- Hamburger Menu -->
+                <nav class="main-nav" id="drawerNav">
+                    <a href="javascript:void(0)" onclick="closeNav()" class="main-nav-close">
+                        <i class="fas fa-times-circle"></i>
+                    </a>
+                    <ul class="main-nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Protfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- end .container -->
         </div>
         <!-- end .navigation -->
         <div class="personal-info">
@@ -177,6 +181,7 @@
     <footer>
         <p class="copyright">Copyright &copy; 2019 Kabandangi Kanangila</p>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

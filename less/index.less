@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Oswald&display=swap');
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -29,9 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-}
-html {
-	font-size: 62.5%;
+	overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -49,17 +48,196 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
-// Variables
-@primary-color: #be24aa;
+/** Variables */
+// Colors
+@color-primary: #03dac6;
+@color-accent: #018786;
+@color-hover: darken(@color-primary, 10%);
+@dark-color-1: #121212;
+@dark-color-2: #1f2022;
+@dark-color-3: #222629;
+@grey-color: #818181;
+
+// Mixins
+/** fonts **/
+#fonts {
+	.montserrat() {
+		font-family: 'Montserrat' sans-serif;
+	}
+
+	.oswald() {
+		font-family: 'Oswald', sans-serif;
+	}
+}
+#container {
+	.phone() {
+		width: 100%;
+		padding: 1rem;
+	}
+	.tablet() {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.desktop() {
+		width: 60%;
+		margin:  0 auto;
+	}
+}
+#display {
+	.flex() {
+		display: flex;
+	}
+	.flex-direction-row() {
+		flex-direction: row;
+	}
+	.flex-direction-column() {
+		flex-direction: column;
+	}
+}
+/** Normalize **/
+
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-color: @dark-color-2;
+	font-size: 62.5%;
+	#fonts.montserrat()
+}
+
+button, a {
+	background: none;
+	border: none;
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+/** main style **/
+
+body {
+	padding-top: 60px;
+}
+.container {
+	#container.phone();
+
+	@media screen and (min-width: 760px) {
+		#container.tablet();
+	}
+
+	@media screen and (min-width: 1680) {
+		#container.desktop();
+	}
 }
 
 header {
+	#display.flex();
+	#display.flex-direction-column();
+	font-size: 1.6rem;
+	color: #ffffff;
+}
+
+/** Navigation **/
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: fit-content;
+	background-color: @dark-color-1;
+	box-shadow: -1px 3px 3px -2px rgba(0,0,0, 1);
+	-webkit-box-shadow: -1px 3px 3px -2px rgba(0,0,0, 1);
+	-moz-box-shadow: -1px 3px 3px -2px rgba(0,0,0, 1);
+
+	.container {
+		#display.flex();
+		#display.flex-direction-row();
+		justify-content: space-between;
+		.logo {
+			display: block;
+			padding: 5px;
+			width: 40px;
+			background-color: @color-primary;
+			border-radius: 4px;
+		} // end logo
+		.nav-toggle {
+			color: #ffffff;
+			font-size: 25px;
+			margin-top: 3px;
+		}
+	} // end container
+}
+
+/** Main Navigation (Hamburger Menu) **/
+.main-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: @dark-color-1;
+	height: 100vh;
+	width: 0;
+	overflow-x: hidden;
+	transition: .5s;
+	#display.flex();
+	#display.flex-direction-column();
+	justify-content: center;
+	box-shadow: 4px 0px 3px -2px rgba(0,0,01);
+	-webkit-box-shadow: 4px 0px 3px -2px rgba(0,0,01);
+	-moz-box-shadow: 4px 0px 3px -2px rgba(0,0,01);
+	z-index: 1;
+	// Links
+	&-links {
+		#display.flex();
+		#display.flex-direction-column();
+		width: 100%;
+		li {
+			width: 100%;
+			a {
+				display: block;
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 1.1rem;
+				color: @grey-color;
+				padding: 1.5rem 0;
+				transition: .3s;
+
+				@media screen and (min-width: 760px) {
+					font-size: 1.6rem;
+				}
+			}
+			a:hover {
+				background-color: @color-primary;
+				color: #fff;
+			}
+		} // end li
+	} // end -links
 	
+	// Close Button
+	&-close {
+		position: absolute;
+		top: 2rem;
+		right: 2.5rem;
+		color: @grey-color;
+		font-size: 3.6rem;
+	}
+
+	&-close:hover {
+		color: #fff;
+	}
+}
+
+// personal info
+.personal-info {
+	.profile {
+		img {
+			width: 11rem;
+			height: 11rem;
+			margin: 0 auto;
+			border-radius: 50%;
+		}
+	}
 }
