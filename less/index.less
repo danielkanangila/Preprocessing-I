@@ -62,7 +62,7 @@ table {
 /** fonts **/
 #fonts {
 	.montserrat() {
-		font-family: 'Montserrat' sans-serif;
+		font-family: 'Montserrat', sans-serif;
 	}
 
 	.oswald() {
@@ -75,7 +75,7 @@ table {
 		padding: 1rem;
 	}
 	.tablet() {
-		width: 80%;
+		width: 98%;
 		margin: 0 auto;
 	}
 	.desktop() {
@@ -123,28 +123,34 @@ body {
 }
 .container {
 	#container.phone();
+	font-size: 1.25rem;
 
 	@media screen and (min-width: 760px) {
 		#container.tablet();
+		font-size: 1.25rem;
 	}
 
-	@media screen and (min-width: 1680) {
+	@media screen and (min-width: 1125px) {
+		width: 75%;
+	}
+
+	@media screen and (min-width: 1680px) {
 		#container.desktop();
+		font-size: 1.6rem;
 	}
 }
 
 header {
 	#display.flex();
 	#display.flex-direction-column();
-	font-size: 1.6rem;
 	color: #ffffff;
 }
 
 /** Navigation **/
 .navbar {
 	position: fixed;
-	top: 0;
-	left: 0;
+	top: -1px;
+	left: -1px;
 	width: 100%;
 	height: fit-content;
 	background-color: @dark-color-1;
@@ -232,12 +238,112 @@ header {
 
 // personal info
 .personal-info {
+	#display.flex();
+	#display.flex-direction-column();
+	line-height: 1.5;
+	.profile,
+	.contact,
+	.about {
+		width: 100%;
+		padding: 1.5rem;
+
+		@media screen and (min-width: 760px) {
+			width: 33%;
+		}
+
+		h2 {
+			margin-bottom: 15px;
+		}
+	}
+
+	@media screen and (min-width: 760px) {
+		#display.flex-direction-row(); 
+	}
 	.profile {
+		#display.flex();
+		#display.flex-direction-column();
+		align-items: center;
+		background-color: @dark-color-3;
+		margin-top: -5px;
+		padding: 20px;
 		img {
 			width: 11rem;
 			height: 11rem;
-			margin: 0 auto;
+			margin: 0 auto 20px;
 			border-radius: 50%;
 		}
+		h1 {
+			text-align: center;
+		}
+
+		@media screen and (min-width: 1125px) {
+			padding: 20px 2rem;
+		}
+	} // end profile
+	
+	.contact,
+	.about {
+		background-color: @color-primary;
+		color: #000;
 	}
+	.contact {
+		#display.flex();
+		#display.flex-direction-column();
+		line-height: 2.5;
+
+		.contact-item {
+			i {
+				padding: 0.6rem;
+				background-color: #fff;
+				margin-right: 10px;
+				border-radius: 50%;
+				vertical-align: middle;
+			}
+			a {
+				color: @dark-color-1;
+				border-bottom: 1px solid #000;
+				padding-bottom: 2px;
+			}
+			span {
+				display: block;
+				margin-left: 2.3rem;
+			}
+		}
+		
+	}// end contact
+}
+
+/** Main-content **/
+.main-content {
+	.container {
+		#display.flex();
+		#display.flex-direction-column();
+		color: #ffffff;
+
+		@media screen and (min-width: 760px) {
+			#display.flex-direction-row;
+		}
+	}// end container
+
+	// Sections
+	.container section {
+		width: 100%;
+		padding: 1.5rem;
+		h2 {
+			margin-bottom: 15px;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+
+			text-transform: uppercase;
+		}
+		@media screen and (min-width: 760px) {
+			width: 49%;
+			
+		}
+	}
+
+	// Skills
+	.container section#skills {}
 }
