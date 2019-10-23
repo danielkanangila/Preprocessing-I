@@ -159,6 +159,7 @@ header {
 	}// end container
 
 	// Sections
+	.container .section,
 	.container section {
 		width: 100%;
 		padding: 1.5rem;
@@ -182,6 +183,7 @@ header {
 
 	// Skills
 	.container section#skills {
+		width: 100%;
 		.skill > * {
 			margin-top: 7px;
 		}
@@ -195,10 +197,14 @@ header {
 				display: none;
 				@media screen and (min-width: 760px) {
 					display: inline;
+					width: 6%
 				}
 			}
 			h3 {
 				width: 31%;
+				@media screen and (min-width: 760px) {
+					width: 26%;
+				}
 			}
 			.progress {
 				width: 68%;
@@ -209,6 +215,7 @@ header {
 
 	// Educations
 	.container section#educations {
+		width: 100%;
 		.education {
 			.mb-20();
 		} 
