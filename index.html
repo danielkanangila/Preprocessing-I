@@ -1,19 +1,215 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume - Kabandangi Kanangila</title>
 
-  <title>My Resume</title>
-
-  <link rel="stylesheet" href="css/index.css">
-
-  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/10dac8eb5a.js" crossorigin="anonymous"></script>
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+    <header>
+        <div role="navigation" class="navbar">
+            <div class="container">
+
+                <a href="index.html" class="logo">
+                    <object data="images/logo.svg" type="image/svg+xml" class="logo-img"></object>
+                </a>
+                <a href="javascript:void(0)" onclick="openNav()" class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <!-- Hamburger Menu -->
+                <nav class="main-nav" id="drawerNav">
+                    <a href="javascript:void(0)" onclick="closeNav()" class="main-nav-close">
+                        <i class="fas fa-times-circle"></i>
+                    </a>
+                    <ul class="main-nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Protfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- end .container -->
+        </div>
+        <!-- end .navigation -->
+        <div class="container">
+            <div class="personal-info">
+                <div class="profile">
+                    <img src="images/my_profile_pic.png" alt="Kabandangi Kanangila Picture">
+                    <h1>Kabandangi K. Kanangila</h1>
+                </div>
+                <!-- end .profile -->
+                <div class="contact">
+                    <h2>Contact Me</h2>
+                    <p class="contact-item">
+                        <i class="fas fa-mobile-alt"></i> +1 (336) 675-0468
+                    </p>
+                    <p class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i> 1108 Deerfield Trce <span>Mebane, NC-27302</span>
+
+                    </p>
+                    <p class="contact-item">
+                        <i class="fas fa-envelope"></i> kabandangi.kanangila@gmail.com
+                    </p>
+                    <p class="contact-item">
+                        <i class="fab fa-linkedin-in"></i>
+                        <a href="https://www.linkedin.com/in/kkanangila">
+              linkedin.com/in/kkanangila
+            </a>
+                    </p>
+                    <p class="contact-item ">
+                        <i class="fab fa-twitter"></i>
+                        <a href="https://twitter.com/kabandangi">
+              twitter.com/kabandangi
+            </a>
+                    </p>
+                </div>
+                <!-- end .contact -->
+                <div class="about">
+                    <h2>About Me</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor harum dolorem neque? Culpa aliquam cupiditate omnis fugit molestiae non facilis, exercitationem consequatur cum corrupti mollitia tempore architecto temporibus rerum voluptate.
+                    </p>
+                </div>
+            </div>
+            <!-- end .personal-info-->
+        </div>
+        <!-- end .container -->
+    </header>
+    <!-- end header -->
+    <div class="main-content">
+        <div class="container">
+            <!-- Wrap #skills and #educations in one column -->
+            <div class="section">
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <div class="skill">
+                        <i class="fas fa-code"></i>
+                        <h3>Html</h3>
+                        <div class="progress small">
+                            <span style="width:85%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS</h3>
+                        <div class="progress small">
+                            <span style="width:75%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <div class="progress small">
+                            <span style="width:55%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                        <div class="progress small">
+                            <span style="width:30%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-php"></i>
+                        <h3>Php</h3>
+                        <div class="progress small">
+                            <span style="width:55%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-boxes"></i>
+                        <h3>Inventory</h3>
+                        <div class="progress small">
+                            <span style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-pallet"></i>
+                        <h3>Warehousing</h3>
+                        <div class="progress small">
+                            <span style="width:45%"></span>
+                        </div>
+                    </div>
+                </section>
+                <!-- end #skills -->
+                <section id="educations">
+                    <h2>Education</h2>
+                    <div class="education">
+                        <p class="year">2013 - 2017</p>
+                        <h3>University of Tourism, Technology and Business Studies</h3>
+                        <p class="title">Bachelor in Business Information Technology</p>
+                    </div>
+                    <div class="education">
+                        <p class="year">1999 - 2006</p>
+                        <h3>CS Dibasana</h3>
+                        <p class="title">High School Diplama in Technics, Commercial and Administrative</p>
+                    </div>
+                </section>
+                <!-- end #educations -->
+            </div>
+
+            <section id="workHistory">
+                <h2>Work History</h2>
+                <div class="experience">
+                    <p class="year">2019 -</p>
+                    <div>
+                        <h3>Lidl US, LLC <i class="fas fa-map-marker-alt"></i> Graham, NC</h3>
+                        <h4 class="title">Warehouse Associate</h4>
+                        <p class="description">
+                            Pick and fill orders, confirm inventory, labeled and prepare freight, maintain safe and clean work environment.
+                        </p>
+                    </div>
+                </div>
+                <div class="experience">
+                    <p class="year">2018 - 2019</p>
+                    <div>
+                        <h3>Walmart, Inc <i class="fas fa-map-marker-alt"></i> Mebane, NC</h3>
+                        <h4 class="title">Freight Handler</h4>
+                        <p class="description">
+                            Pick and fill orders, confirm inventory, labeled and prepare freight, maintain safe and clean work environment.
+                        </p>
+                    </div>
+                </div>
+                <div class="experience">
+                    <p class="year">2014 - 2015</p>
+                    <div>
+                        <h3>Vodacom Congo <i class="fas fa-map-marker-alt"></i> Goma, DRC</h3>
+                        <h4 class="title">Shop Assistant, Stock Controller</h4>
+                        <p class="description">
+                            Ensure seamless stock availability, invoicing every single sale properly in X3 Sage ERP. Perform weekly and monthly stock and cash inventory.
+                        </p>
+                    </div>
+                </div>
+                <div class="experience">
+                    <p class="year">2006 - 2012</p>
+                    <div>
+                        <h3>Esperience, Ltd <i class="fas fa-map-marker-alt"></i> Kinshasa, DRC</h3>
+                        <h4 class="title">Stock Controller</h4>
+                        <p class="description">
+                            Prepare and maintain records of customer orders, perfom inventory and quality control, ensure availability of products on remote shops and dispatch products according to requisitions form
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- end #workHistory -->
+        </div>
+    </div>
+    <!-- end .main-content -->
+    <footer>
+        <p class="copyright">Copyright &copy; 2019 Kabandangi Kanangila</p>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

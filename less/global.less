@@ -1,0 +1,93 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	background-color: @dark-color-2;
+	font-size: 62.5%;
+	#fonts.montserrat()
+}
+
+button, a {
+	background: none;
+	border: none;
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+body {
+	padding-top: 60px;
+}
+.container {
+	#container.phone();
+	font-size: 1.25rem;
+
+	@media screen and (min-width: 760px) {
+		#container.tablet();
+		font-size: 1.25rem;
+	}
+
+	@media screen and (min-width: 1125px) {
+		width: 75%;
+	}
+
+	@media screen and (min-width: 1680px) {
+		#container.desktop();
+		font-size: 1.6rem;
+	}
+}
+
+.year {
+	.mb-7();
+}
+
+.title {
+	.mt-10();
+}
+
+.description {
+	.mt-10();
+}
+
+// Main container
+.main-content {
+	.container {
+		.flex-layout(column, flex-start, inherit);
+		color: #ffffff;
+
+		@media screen and (min-width: 760px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+    }// end container
+
+    // Sections
+	.container .section,
+	.container section {
+		width: 100%;
+		padding: 1.5rem;
+		background-color: @dark-color-3;
+		line-height: 1.5;
+		h2 {
+			margin-bottom: 15px;
+		}
+
+		h3 {
+			font-size: 1rem;
+
+			text-transform: uppercase;
+		}
+
+		@media screen and (min-width: 760px) {
+			width: 50%;
+			
+		}
+	}
+
+	.container .section {
+		padding: 0;
+	}
+}

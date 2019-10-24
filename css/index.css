@@ -1,1 +1,541 @@
-/* Compile your LESS file! */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v29/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf) format('truetype');
+}
+/** Variables */
+/** fonts **/
+.mt-20 {
+  margin-top: 25px;
+}
+.mb-20 {
+  margin-bottom: 25px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mt-7 {
+  margin-top: 7px;
+}
+.mb-7 {
+  margin-bottom: 7px;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.progress {
+  height: 20px;
+  position: relative;
+  background-color: #555;
+  padding: 10px;
+}
+.progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #03dac6;
+  overflow: hidden;
+}
+.progress.small {
+  height: 10px;
+  padding: 5px;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: #1f2022;
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+}
+button,
+a {
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+body {
+  padding-top: 60px;
+}
+.container {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 760px) {
+  .container {
+    width: 98%;
+    margin: 0 auto;
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1125px) {
+  .container {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .container {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.6rem;
+  }
+}
+.year {
+  margin-bottom: 7px;
+}
+.title {
+  margin-top: 10px;
+}
+.description {
+  margin-top: 10px;
+}
+.main-content .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: inherit;
+  color: #ffffff;
+}
+@media screen and (min-width: 760px) {
+  .main-content .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.main-content .container .section,
+.main-content .container section {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #222629;
+  line-height: 1.5;
+}
+.main-content .container .section h2,
+.main-content .container section h2 {
+  margin-bottom: 15px;
+}
+.main-content .container .section h3,
+.main-content .container section h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 760px) {
+  .main-content .container .section,
+  .main-content .container section {
+    width: 50%;
+  }
+}
+.main-content .container .section {
+  padding: 0;
+}
+/** Navigation **/
+.navbar {
+  position: fixed;
+  top: -1px;
+  left: -1px;
+  width: 100%;
+  height: fit-content;
+  background-color: #121212;
+  box-shadow: -1px 3px 3px -2px #000000;
+  -webkit-box-shadow: -1px 3px 3px -2px #000000;
+  -moz-box-shadow: -1px 3px 3px -2px #000000;
+  z-index: 5;
+}
+.navbar .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: inherit;
+}
+.navbar .container .logo {
+  display: block;
+  padding: 5px;
+  width: 40px;
+  background-color: #03dac6;
+  border-radius: 4px;
+}
+.navbar .container .nav-toggle {
+  color: #ffffff;
+  font-size: 25px;
+  margin-top: 3px;
+}
+/** Main Navigation (Hamburger Menu) **/
+.main-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #121212;
+  height: 100vh;
+  width: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: inherit;
+  box-shadow: 4px 0px 3px -2px rgba(0, 0, 1);
+  -webkit-box-shadow: 4px 0px 3px -2px rgba(0, 0, 1);
+  -moz-box-shadow: 4px 0px 3px -2px rgba(0, 0, 1);
+  z-index: 1;
+}
+.main-nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: inherit;
+  width: 100%;
+}
+.main-nav-links li {
+  width: 100%;
+}
+.main-nav-links li a {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #818181;
+  padding: 1.5rem 0;
+  transition: 0.3s;
+}
+@media screen and (min-width: 760px) {
+  .main-nav-links li a {
+    font-size: 1.6rem;
+  }
+}
+.main-nav-links li a:hover {
+  background-color: #03dac6;
+  color: #121212;
+}
+.main-nav-close {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  color: #818181;
+  font-size: 3.6rem;
+}
+.main-nav-close:hover {
+  color: #fff;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+}
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: inherit;
+  line-height: 1.5;
+}
+.personal-info .profile,
+.personal-info .contact,
+.personal-info .about {
+  width: 100%;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 760px) {
+  .personal-info .profile,
+  .personal-info .contact,
+  .personal-info .about {
+    width: 33.33%;
+  }
+}
+.personal-info .profile h2,
+.personal-info .contact h2,
+.personal-info .about h2 {
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 760px) {
+  .personal-info {
+    flex-direction: row;
+  }
+}
+.personal-info .profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #222629;
+  margin-top: -5px;
+  padding: 20px;
+}
+.personal-info .profile img {
+  width: 11rem;
+  height: 11rem;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+}
+.personal-info .profile h1 {
+  text-align: center;
+}
+@media screen and (min-width: 760px) {
+  .personal-info .profile {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1125px) {
+  .personal-info .profile {
+    padding: 20px 2rem;
+    margin-top: 0;
+  }
+}
+.personal-info .contact,
+.personal-info .about {
+  background-color: #03dac6;
+  color: #000;
+}
+.personal-info .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: inherit;
+  line-height: 2.5;
+}
+.personal-info .contact h2 {
+  line-height: 1.5;
+}
+.personal-info .contact .contact-item i {
+  width: 24px;
+  height: 24px;
+  padding: 0.6rem;
+  background-color: #fff;
+  margin-right: 10px;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+}
+.personal-info .contact .contact-item a {
+  color: #121212;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+}
+.personal-info .contact .contact-item span {
+  display: block;
+  margin-left: 3.5rem;
+}
+.main-content .container section#skills {
+  width: 100%;
+}
+.main-content .container section#skills .skill > * {
+  margin-top: 7px;
+}
+.main-content .container section#skills .skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main-content .container section#skills .skill i {
+  display: none;
+}
+@media screen and (min-width: 760px) {
+  .main-content .container section#skills .skill i {
+    display: inline;
+    width: 24px;
+    height: 24px;
+    padding: 0.6rem;
+    background-color: #fff;
+    margin-right: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    color: #000000;
+  }
+}
+.main-content .container section#skills .skill h3 {
+  width: 31%;
+}
+@media screen and (min-width: 760px) {
+  .main-content .container section#skills .skill h3 {
+    width: 26%;
+  }
+}
+.main-content .container section#skills .skill .progress {
+  width: 69%;
+}
+.main-content .container section#educations {
+  width: 100%;
+}
+.main-content .container section#educations .education {
+  margin-bottom: 25px;
+}
+.main-content .container section#educations .education:last-child {
+  margin-bottom: 0;
+}
+.main-content .container section#workHistory .experience {
+  margin-top: 25px;
+}
+.main-content .container section#workHistory .experience h3 i {
+  margin: 0 10px;
+}
+.main-content .container section#workHistory .experience h4 {
+  font-weight: normal;
+}
+.main-content .container section#workHistory .experience:last-child {
+  margin-bottom: 0;
+}
+/** Footer **/
+footer {
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+  text-align: center;
+  color: #fff;
+}
+footer .copyright {
+  letter-spacing: 0.2rem;
+  font-size: 0.6rem;
+  opacity: 0.75;
+  text-transform: uppercase;
+}

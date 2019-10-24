@@ -1,0 +1,76 @@
+// Mixins
+/** fonts **/
+#fonts {
+	.montserrat() {
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.oswald() {
+		font-family: 'Oswald', sans-serif;
+	}
+}
+#container {
+	.phone() {
+		width: 100%;
+		padding: 1rem;
+	}
+	.tablet() {
+		width: 98%;
+		margin: 0 auto;
+	}
+	.desktop() {
+		width: 60%;
+		margin:  0 auto;
+	}
+}
+
+.flex-layout(@direction, @justify, @align) {
+	display: flex;
+	flex-direction: @direction;
+	justify-content: @justify;
+	align-items: @align;
+}
+
+.boz-sizing(@w, @h) {
+	width: @w;
+	height: @h;
+}
+
+.icon(@w, @h) {
+	.boz-sizing(@w, @h);
+	padding: 0.6rem;
+	background-color: #fff;
+	margin-right: 10px;
+	border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 25px;
+}
+
+.mb-20 {
+    margin-bottom: 25px;
+}
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mt-7 {
+    margin-top: 7px;
+}
+
+.mb-7 {
+    margin-bottom: 7px;
+}
