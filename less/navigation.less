@@ -12,9 +12,7 @@
     z-index: 5;
     
 	.container {
-		#display.flex();
-		#display.flex-direction-row();
-		justify-content: space-between;
+		.flex-layout(row, space-between, inherit);
 		.logo {
 			display: block;
 			padding: 5px;
@@ -40,17 +38,14 @@
 	width: 0;
 	overflow-x: hidden;
 	transition: .5s;
-	#display.flex();
-	#display.flex-direction-column();
-	justify-content: center;
+	.flex-layout(column, center, inherit);
 	box-shadow: 4px 0px 3px -2px rgba(0,0,01);
 	-webkit-box-shadow: 4px 0px 3px -2px rgba(0,0,01);
 	-moz-box-shadow: 4px 0px 3px -2px rgba(0,0,01);
 	z-index: 1;
 	// Links
 	&-links {
-		#display.flex();
-		#display.flex-direction-column();
+		.flex-layout(column, flex-start, inherit);
 		width: 100%;
 		li {
 			width: 100%;
