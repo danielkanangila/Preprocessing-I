@@ -71,7 +71,7 @@ header {
 		padding: 1.5rem;
 
 		@media screen and (min-width: 760px) {
-			width: 33%;
+			width: 33.33%;
 		}
 
 		h2 {
@@ -99,6 +99,10 @@ header {
 			text-align: center;
 		}
 
+		@media screen and (min-width: 760px) {
+			margin-top: 0;
+		}
+
 		@media screen and (min-width: 1125px) {
 			padding: 20px 2rem;
 			margin-top: 0;
@@ -114,10 +118,16 @@ header {
 		#display.flex();
 		#display.flex-direction-column();
 		line-height: 2.5;
-
+		h2 {
+			line-height: 1.5;
+		}
 		.contact-item {
 			i {
 				.icon();
+				width: 5%;
+				@media screen and (min-width: 760px) {
+					width: 24px;
+				}
 			}
 			a {
 				color: @dark-color-1;
@@ -176,9 +186,13 @@ header {
 		}
 
 		@media screen and (min-width: 760px) {
-			width: 49%;
+			width: 50%;
 			
 		}
+	}
+
+	.container .section {
+		padding: 0;
 	}
 
 	// Skills
@@ -197,7 +211,7 @@ header {
 				display: none;
 				@media screen and (min-width: 760px) {
 					display: inline;
-					width: 6%
+					width: 24px;
 				}
 			}
 			h3 {
@@ -207,7 +221,7 @@ header {
 				}
 			}
 			.progress {
-				width: 68%;
+				width: 69%;
 			}
 		} 
 		// end skill

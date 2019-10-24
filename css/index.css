@@ -343,7 +343,7 @@ header {
   .personal-info .profile,
   .personal-info .contact,
   .personal-info .about {
-    width: 33%;
+    width: 33.33%;
   }
 }
 .personal-info .profile h2,
@@ -373,6 +373,11 @@ header {
 .personal-info .profile h1 {
   text-align: center;
 }
+@media screen and (min-width: 760px) {
+  .personal-info .profile {
+    margin-top: 0;
+  }
+}
 @media screen and (min-width: 1125px) {
   .personal-info .profile {
     padding: 20px 2rem;
@@ -389,6 +394,9 @@ header {
   flex-direction: column;
   line-height: 2.5;
 }
+.personal-info .contact h2 {
+  line-height: 1.5;
+}
 .personal-info .contact .contact-item i {
   padding: 0.6rem;
   background-color: #fff;
@@ -396,6 +404,12 @@ header {
   border-radius: 50%;
   vertical-align: middle;
   text-align: center;
+  width: 5%;
+}
+@media screen and (min-width: 760px) {
+  .personal-info .contact .contact-item i {
+    width: 24px;
+  }
 }
 .personal-info .contact .contact-item a {
   color: #121212;
@@ -446,8 +460,11 @@ header {
 @media screen and (min-width: 760px) {
   .main-content .container .section,
   .main-content .container section {
-    width: 49%;
+    width: 50%;
   }
+}
+.main-content .container .section {
+  padding: 0;
 }
 .main-content .container section#skills {
   width: 100%;
@@ -472,7 +489,7 @@ header {
 @media screen and (min-width: 760px) {
   .main-content .container section#skills .skill i {
     display: inline;
-    width: 6%;
+    width: 24px;
   }
 }
 .main-content .container section#skills .skill h3 {
@@ -484,7 +501,7 @@ header {
   }
 }
 .main-content .container section#skills .skill .progress {
-  width: 68%;
+  width: 69%;
 }
 .main-content .container section#educations {
   width: 100%;
